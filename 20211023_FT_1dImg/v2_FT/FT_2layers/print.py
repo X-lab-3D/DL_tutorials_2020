@@ -22,7 +22,7 @@ rgb = img.img_flat #rgb.shape = [n_pixel, 4]
 
 #network param
 criterion = nn.MSELoss()
-net = Net(f=1/(128*128*3),N=200)
+net = Net(f=1/(img.shape[1]*img.shape[2]),N=200) #img.shape = [4, 128, 128]
 opt = optim.Adam(params=net.parameters())
 
 
